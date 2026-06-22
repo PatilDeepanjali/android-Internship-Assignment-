@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF2FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:background="#0058BE"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="My medical"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/search_icon"
+                android:src="@drawable/ic_search"
+                app:tint="#FFFFFF"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/user_avatar"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"/>
+
+        </LinearLayout>
+
+        <!-- ── SCROLLABLE BODY ── -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="70dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <!-- Hero Banner Image -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:id="@+id/ivHeroBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/medical_banner"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/medical_banner"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Recent Hotspots Heading -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="Recent hotspots"
+                    android:textColor="#0D1B3D"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <!-- Hotspot Grid Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Registered -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardRegistered"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:contentDescription="@string/hotspot_icon"
+                                    android:padding="9dp"
+                                    android:src="@drawable/ic_check"
+                                    app:tint="#1FA855"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Registered"
+                                    android:textColor="#0D1B3D"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:text="Just 5 minutes"
+                                android:textColor="#5B6478"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Inquiry -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardInquiry"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="#0058BE"
+                                    android:contentDescription="@string/hotspot_icon"
+                                    android:padding="9dp"
+                                    android:src="@drawable/ic_info"
+                                    app:tint="#81AFF0"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Inquiry"
+                                    android:textColor="#0D1B3D"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:text="Multiple Problems"
+                                android:textColor="#5B6478"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- Hotspot Grid Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <!-- Pharmacy -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardPharmacy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:contentDescription="@string/hotspot_icon"
+                                    android:padding="9dp"
+                                    android:src="@drawable/ic_pharmacy"
+                                    app:tint="#E08A2C"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Pharmacy"
+                                    android:textColor="#0D1B3D"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:text="Life Medication"
+                                android:textColor="#5B6478"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Lecture -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardLecture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:contentDescription="@string/hotspot_icon"
+                                    android:padding="9dp"
+                                    android:src="@drawable/ic_lecture"
+                                    app:tint="#D8434C"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Lecture"
+                                    android:textColor="#0D1B3D"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:text="Inspection Report"
+                                android:textColor="#5B6478"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- Today's Topic Heading -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginBottom="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Today's topic"
+                        android:textColor="#0D1B3D"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvSeeAllTopics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all"
+                        android:textColor="#0C5BD9"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Topic Card 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTopic1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Participation in Extracurricular Activities"
+                                android:textColor="#0D1B3D"
+                                android:textSize="17sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="Civil Hospital"
+                                android:textColor="#5B6478"
+                                android:textSize="14sp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:contentDescription="@string/views_icon"
+                                    android:src="@drawable/ic_eye"
+                                    app:tint="#8A93A6"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="14dp"
+                                    android:text="200"
+                                    android:textColor="#5B6478"
+                                    android:textSize="13sp"/>
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:contentDescription="@string/likes_icon"
+                                    android:src="@drawable/ic_thumb_up"
+                                    app:tint="#8A93A6"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="14dp"
+                                    android:text="20"
+                                    android:textColor="#5B6478"
+                                    android:textSize="13sp"/>
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:contentDescription="@string/comments_icon"
+                                    android:src="@drawable/ic_comment"
+                                    app:tint="#8A93A6"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="12"
+                                    android:textColor="#5B6478"
+                                    android:textSize="13sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/topic_thumbnail"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/item1"/>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Topic Card 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTopic2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Understanding Modern Depression Management"
+                                android:textColor="#0D1B3D"
+                                android:textSize="17sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="Orange Hospital"
+                                android:textColor="#5B6478"
+                                android:textSize="14sp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:contentDescription="@string/views_icon"
+                                    android:src="@drawable/ic_eye"
+                                    app:tint="#8A93A6"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="14dp"
+                                    android:text="200"
+                                    android:textColor="#5B6478"
+                                    android:textSize="13sp"/>
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:contentDescription="@string/likes_icon"
+                                    android:src="@drawable/ic_thumb_up"
+                                    app:tint="#8A93A6"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="14dp"
+                                    android:text="20"
+                                    android:textColor="#5B6478"
+                                    android:textSize="13sp"/>
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:contentDescription="@string/comments_icon"
+                                    android:src="@drawable/ic_comment"
+                                    app:tint="#8A93A6"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="20"
+                                    android:textColor="#5B6478"
+                                    android:textSize="13sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/topic_thumbnail"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/item2"/>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- Bottom Nav -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:elevation="8dp"
+        app:itemIconTint="@drawable/bottom_nav_color_state"
+        app:itemTextColor="@drawable/bottom_nav_color_state"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

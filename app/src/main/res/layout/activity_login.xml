@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/splash_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <ImageView
+            android:id="@+id/imgHeader"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:paddingStart="20dp"
+            android:layout_marginTop="140dp"
+            android:paddingEnd="20dp"
+            android:scaleType="fitStart"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/header_top_logo" />
+
+        <!-- Login Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="@string/welcome_back"
+                    android:textColor="@color/dark_text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:gravity="center"
+                    android:text="Sign in to continue your journey with Aura."
+                    android:textColor="@color/grey_text"
+                    android:textSize="14sp" />
+
+                <!-- Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/email"
+                    android:textColor="@color/dark_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_input_field"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:alpha="0.45"
+                        android:contentDescription="@string/email_icon"
+                        android:src="@android:drawable/ic_dialog_email" />
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="name@example.com"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Password -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/password"
+                    android:textColor="@color/dark_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_input_field"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:alpha="0.45"
+                        android:contentDescription="@string/password_icon"
+                        android:src="@android:drawable/ic_lock_idle_lock" />
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="••••••••"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivTogglePassword"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:alpha="0.5"
+                        android:contentDescription="@string/toggle_password_visibility"
+                        android:src="@android:drawable/ic_menu_view" />
+                </LinearLayout>
+
+                <!-- Forgot Password -->
+                <TextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="28dp"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- Login Button -->
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/bg_button_blue"
+                    android:text="Login →"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- OR divider -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/divider" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/or_continue"
+                        android:textColor="@color/grey_text"
+                        android:textSize="11sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/divider" />
+                </LinearLayout>
+
+                <!-- Google + Apple buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnGoogle"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_google_button"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="🔶  Google"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnApple"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_google_button"
+                        android:gravity="center"
+                        android:text="⠿  Apple"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Sign Up link -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_account"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bottom security row -->
+        <ImageView
+            android:id="@+id/imgBottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/security_badges"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bottom_security" />
+
+    </LinearLayout>
+
+</ScrollView>

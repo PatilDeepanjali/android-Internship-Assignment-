@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Aura</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="or_continue">OR CONTINUE WITH</string>
+    <string name="luminous">LUMINOUS UTILITY</string>
+    <string name="hello_user">Hello, %1$s</string>
+
+    <string name="user_avatar">User avatar</string>
+    <string name="friend_avatar">Friend avatar</string>
+    <string name="food_image">Food image</string>
+    <string name="greeting_format">Hi, %1$s</string>
+    <string name="bill_amount_format">$%1$.2f</string>
+
+
+    <string name="search_icon">Search</string>
+    <string name="medical_banner">Medical banner image</string>
+    <string name="hotspot_icon">Hotspot category icon</string>
+    <string name="views_icon">Views</string>
+    <string name="likes_icon">Likes</string>
+    <string name="comments_icon">Comments</string>
+    <string name="topic_thumbnail">Topic thumbnail</string>
+
+
+    <string name="back_icon">Back</string>
+    <string name="location_icon">Location</string>
+    <string name="shop_image">Laundry shop photo</string>
+
+    <string name="app_logo">Aura app logo</string>
+    <string name="email_icon">Email icon</string>
+    <string name="password_icon">Password icon</string>
+    <string name="toggle_password_visibility">Show or hide password</string>
+    <string name="security_badges">Security certification badges</string>
+</resources>
